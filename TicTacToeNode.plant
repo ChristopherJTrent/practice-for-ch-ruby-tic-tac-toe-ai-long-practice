@@ -1,0 +1,20 @@
+@startuml
+object root {
+    @board = [['','',''],['','',''],['','','']]
+    @next_mover_mark = :x
+    @prev_move_pos = nil
+}
+object child1 {
+    @board = [[:x,'',''],['','',''],['','','']]
+    @next_mover_mark = :o
+    @prev_move_pos = [[?]]
+}
+object child2 {
+    @board = [['',:x,''],['','',''],['','','']]
+    @next_mover_mark = :o
+    @prev_move_pos = [[?]]
+}
+
+root --> child1
+root --> child2
+@enduml
